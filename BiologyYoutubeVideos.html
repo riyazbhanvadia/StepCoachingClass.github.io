@@ -1,39 +1,78 @@
 <!DOCTYPE html>
 <html>
-    <title>W3.CSS Template</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-
     <head>
-        <style>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="w3.css">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="jquery.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+
+
+        <style> 
+
+            .w3-btn {margin-bottom:10px;}
+
+            .buttonhover:hover {
+                background-color: #555555;
+                color: white;
+            }
+
             .mystyle{
                 font-family: Courier new;
                 font-weight: bold;
-                font-size: 20px;
-                
-            }    
+                font-size: 15px;
+                font-family: monospace;
+            }
+
+            .flex-container {
+                display: -webkit-flex;
+                display: flex;  
+                -webkit-flex-flow: row wrap;
+                flex-flow: row wrap;
+                text-align: center;
+            }
+
+            .flex-container > * {
+                padding: 15px;
+                -webkit-flex: 1 100%;
+                flex: 1 100%;
+            }
+
+            .article {
+                text-align: left;
+            }   
+
+            header {background: black;color:white;}
+            footer {background: BLACK;color:white;}
+            .nav {background:#eee;}
+
+            .nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            .nav ul a {
+                text-decoration: none;
+            }
+
+
+
+
         </style>
+
+       
     </head>
-
-
     <body>
 
-
-        <header class="w3-center w3-black w3-padding-16 ">
-            <h4 class="mystyle">Step Coaching Class</h4>
-            <h5 class="mystyle">Physics Videos</h5>
-        </header>
-
-        <!-- Page content -->
-        <div class="w3-content w3-padding" style="max-width:1564px">
-
-            <!-- Project Section -->
+        <div class="flex-container">
+            <header>
+                <h4>STEP COACHING CLASS</h4>
+                <h5>BIOLOGY YOUTUBE VIDEOS</h5>
+            </header>
 
 
-            <div class="w3-row-padding">
-                <div class="w3-col l3 m6 w3-margin-bottom">
+           <div class="w3-row-padding">
+                 <div class="w3-col l3 m6 w3-margin-bottom">
                     <div class="w3-display-container">
                         <div class="w3-display-topleft w3-black w3-padding" style="font-size: 11px">Human Eye</div>
                         <a href="https://www.youtube.com/watch?v=eDIma_Ai1Rc"><img src="https://i.ytimg.com/vi/eDIma_Ai1Rc/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDS6i3MtPMjdnwHlPEWdd22MDseBA" style="width:100%"></a>
@@ -79,20 +118,11 @@
                         <a href="https://www.youtube.com/watch?v=eDIma_Ai1Rc"><img src="https://i.ytimg.com/vi/eDIma_Ai1Rc/hqdefault.jpg?sqp=-oaymwEXCPYBEIoBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDS6i3MtPMjdnwHlPEWdd22MDseBA" style="width:100%"></a>
                     </div>
                 </div>
-             
                 
-                
-                
-                
-
             </div>
 
+            <footer><a href="feedback.html"><p><button class="w3-btn w3-block w3-border mystyle buttonhover">FEEDBACK</button></p></a></footer>
         </div>
-
-
-        <footer class="w3-center w3-black w3-padding-16">
-            <p>Amit Lakhani</p>
-        </footer>
 
     </body>
 </html>

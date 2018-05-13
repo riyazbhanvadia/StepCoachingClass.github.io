@@ -1,142 +1,89 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-    body {font-family: Arial, Helvetica, sans-serif;}
+    <head>
 
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="w3.css">
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <script src="jquery.min.js"></script>
+        <script src="bootstrap.min.js"></script>
 
-input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
 
-input[type=submit]:hover {
-    background-color: #45a049;
-}
+        <style> 
 
-.container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
-    
-    
-    
-body {font-family: Arial, Helvetica, sans-serif;}
+            .w3-btn {margin-bottom:10px;}
+            
+              .w3-btn {margin-bottom:10px;}
+            
+               .buttonhover:hover {
+                background-color: #555555;
+                color: white;
+            }
+            
+            .mystyle{
+                font-family: Courier new;
+                font-weight: bold;
+                font-size: 15px;
+                font-family: monospace;
+            }
+            
+                        .flex-container {
+                display: -webkit-flex;
+                display: flex;  
+                -webkit-flex-flow: row wrap;
+                flex-flow: row wrap;
+                text-align: center;
+            }
 
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
+            .flex-container > * {
+                padding: 15px;
+                -webkit-flex: 1 100%;
+                flex: 1 100%;
+            }
 
-/* Modal Content */
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
+            .article {
+                text-align: left;
+            }   
 
-/* The Close Button */
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
+            header {background: black;color:white;}
+            footer {background: BLACK;color:white;}
+            .nav {background:#eee;}
 
-.close:hover,
-.close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-}
-</style>
-</head>
-<body>
+            .nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            .nav ul a {
+                text-decoration: none;
+            }
 
-<h2>Modal Example</h2>
+            @media all and (min-width: 768px) {
+                .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+                .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+                footer {-webkit-order:3;order:3;}
+            }
+        </style>
+    </head>
+    <body>
 
-<!-- Trigger/Open The Modal -->
-<button id="myBtn">Open Modal</button>
+        <div class="flex-container">
+            <header>
+                <h4>STEP COACHING CLASS</h4>
+                <h5>CBSE TWELVE</h5>
+            </header>
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
 
-  <!-- Modal content -->
-  <div class="modal-content">
- 
- 
+            <article class="article">
+                <div class="container">
+                   
+                    <a href="https://drive.google.com/uc?export=download&id=1gMuNFluyeadfRSNwBasiGTVgSEA1GZha"><p><button class="w3-btn w3-block w3-border mystyle buttonhover">SCIENCE TEXTBOOK SOLUTION</button></p></a>
+                    <a href="https://drive.google.com/uc?export=download&id=1t-fSxAzQwYsiGw0sqdj1FfOu9TsLAKIo"><p><button class="w3-btn w3-block w3-border mystyle buttonhover">MATHS TEXTBOOK SOLUTION</button></p></a>
+                    
+               </div>
+            </article>
 
-<div class="container">
-  <form action="/action_page.php">
-        <label for="fname">Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-    
-    <label for="subject">Feedback</label>
-    <textarea id="subject" name="subject" placeholder="Your feebback help us in improving the system..." style="height:100px"></textarea>
+            <footer><a href="feedback.html"><p><button class="w3-btn w3-block w3-border mystyle buttonhover">FEEDBACK</button></p></a></footer>
+        </div>
 
-    <input type="submit" value="Submit">
-  </form>
-</div>
-              
-  </div>
-
-</div>
-
-<script>
-// Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
-
-</body>
+    </body>
 </html>
